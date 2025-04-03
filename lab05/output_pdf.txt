@@ -1,0 +1,15 @@
+Queue is Empty!
+Queue is Empty!
+Euqueue 13
+Dequeue 13
+Dequeue failed : Queue is Empty!
+Euqueue 10
+Euqueue 3
+Element in the front : 10
+Element in the rear : 3
+Euqueue 1
+Euqueue 5
+Euqueue 6
+Enqueue failed : Queue is Full!
+Element in the front : 10
+Element in the rear : 6
