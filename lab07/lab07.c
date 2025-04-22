@@ -107,8 +107,10 @@ Tree Insert(Tree tree, int value){
     return tree;
 }
 Tree Delete(Tree tree, int value){
-    if(Find(tree, value) == NULL)
+    if(tree == NULL || Find(tree, value) == NULL){
         printf("Delete failed : Element %d not found\n", value);
+        return tree;
+    }
     if(value > tree->element)
         tree->right = Delete(tree->right, value);
     else if(value < tree->element)
@@ -155,14 +157,17 @@ PtrToNode FindMin(Tree tree){
 PtrToNode FindMax(Tree tree){
     if(tree == NULL)
         return NULL;
-    while(tree->right != NULL)
-        tree = tree->right;
+    else
+        while(tree->right != NULL)
+            tree = tree->right;
     return tree;
 }
 void Print(Tree tree){
     printf("%d ", tree->element);
 }
 void PrintInorder(Tree tree){
+    if(tree == NULL)
+        return;
     if(tree->left != NULL)
         PrintInorder(tree->left);
     Print(tree);
