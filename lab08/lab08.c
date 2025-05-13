@@ -125,7 +125,7 @@ AVLTree Insert(ElementType X, AVLTree T){
         }
     }
     else{
-        printf("Insertion Error: %d is already in the tree!\n", T->Element);
+        printf("Insertion Error : %d is already in the tree!\n", T->Element);
     }
     T->Height = Max(Height(T->Left), Height(T->Right)) + 1;
     return T;
